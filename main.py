@@ -149,7 +149,10 @@ while (True):
                  if (len(voucher_number) != 7 or (voucher_number[0]=="0" or voucher_number[5]=="0" or voucher_number[6]=="0"):
                     print('wrong data entry! ')
                     continue
-            elif voucher_number == 0123456 or voucher_number == 1234567:
+                 else:
+                     discount= total_meal_price*0.15
+                     print('discount:' , discount)
+            else:
                 discount = total_meal_price * 0.15
                 print('discount:', discount)
             else:
