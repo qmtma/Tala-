@@ -134,22 +134,22 @@ while (True):
     voucher = float(input("enter 1 if you want to use a discount voucher: "))
     if voucher == 1:
         phone_number = input('enter your phone number: ')
-        if (len(phone_number) != 8):
+        if (len(phone_number) != 8 or (phone_number[0] not in ['3','5','6']):
             print('wrong data entry!')
             phone_number = input('enter your phone number: ')
-            if (len(phone_number) != 8):
+            if (len(phone_number) != 8 or (phone_number[0] not in ['3','5','6']):
                 print('wrong data entry!')
                 continue
 
         else:
             voucher_number = input("enter voucher number: ")
-            if (len(voucher_number) != 8):
+            if (len(voucher_number) != 7 or (voucher_number[0]=="0" or voucher_number[5]=="0" or voucher_number[6]=="0"):
                 print('wrong data entry! ')
                 voucher_number = input("enter voucher number: ")
-                if (len(voucher_number) != 8):
+                 if (len(voucher_number) != 7 or (voucher_number[0]=="0" or voucher_number[5]=="0" or voucher_number[6]=="0"):
                     print('wrong data entry! ')
                     continue
-            elif voucher_number == 50123456 or voucher_number == 12345678:
+            elif voucher_number == 0123456 or voucher_number == 1234567:
                 discount = total_meal_price * 0.15
                 print('discount:', discount)
             else:
