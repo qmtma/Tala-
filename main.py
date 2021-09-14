@@ -12,6 +12,7 @@ while (True):
     TotalMealPrice = 0
     TotalTax = 0
     GrandTotal = 0
+    phoneInit= ["3", "5", "6"]
     while (done != "no"):
         print("“Welcome new customer!")
         print("Please press ENTER to proceed")
@@ -134,10 +135,10 @@ while (True):
     voucher = float(input("enter 1 if you want to use a discount voucher: "))
     if voucher == 1:
         phone_number = input('enter your phone number: ')
-        if (len(phone_number) != 8 or (phone_number[0] not in ['3','5','6']):
+        if (len(phone_number) != 8 or (phone_number[0] not in phoneInit):
             print('wrong data entry!')
             phone_number = input('enter your phone number: ')
-            if (len(phone_number) != 8 or (phone_number[0] not in ['3','5','6']):
+            if (len(phone_number) != 8 or (phone_number[0] not in phoneInit):
                 print('wrong data entry!')
                 continue
 
